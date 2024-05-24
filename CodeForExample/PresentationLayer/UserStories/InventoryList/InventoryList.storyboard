@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inventory List View Controller-->
+        <scene sceneID="whK-Zl-E9Q">
+            <objects>
+                <viewController storyboardIdentifier="InventoryListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ct-sP-aKE" customClass="InventoryListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ohj-F9-FQp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyE-AZ-UX5" customClass="TenantProfilePressedTextControl" customModule="Flatflow" customModuleProvider="target">
+                                <rect key="frame" x="19.5" y="49" width="375.5" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="a7X-3a-geV"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aZz-Qg-juw">
+                                <rect key="frame" x="0.0" y="109" width="414" height="567"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRS-Oe-OjL">
+                                <rect key="frame" x="20" y="395.5" width="374" height="105"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inventoryPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-yu-NMw">
+                                        <rect key="frame" x="137" y="1" width="100" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="3kI-si-VtP"/>
+                                            <constraint firstAttribute="width" constant="100" id="KP9-PB-9RT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No inventory has been added" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJ6-ye-KTK">
+                                        <rect key="frame" x="25" y="75" width="324" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="ASV-RO-LGg"/>
+                                    <constraint firstItem="GJ6-ye-KTK" firstAttribute="leading" secondItem="vRS-Oe-OjL" secondAttribute="leading" constant="25" id="C1z-R7-Jyz"/>
+                                    <constraint firstItem="Hli-yu-NMw" firstAttribute="centerX" secondItem="vRS-Oe-OjL" secondAttribute="centerX" id="Q5k-AJ-nEf"/>
+                                    <constraint firstAttribute="trailing" secondItem="GJ6-ye-KTK" secondAttribute="trailing" constant="25" id="W44-eA-Pzs"/>
+                                    <constraint firstItem="Hli-yu-NMw" firstAttribute="top" secondItem="vRS-Oe-OjL" secondAttribute="top" constant="1" id="XuA-Fr-Smp"/>
+                                    <constraint firstItem="GJ6-ye-KTK" firstAttribute="top" secondItem="Hli-yu-NMw" secondAttribute="bottom" constant="8" symbolic="YES" id="vMz-Ac-M82"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yVC-aF-V5C">
+                                <rect key="frame" x="20" y="697" width="374" height="106"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXa-SY-jeJ" customClass="DeepButtonColor" customModule="Flatflow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6B-eE-1T1" customClass="DeepButtonColor" customModule="Flatflow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="eYR-Of-u0I"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGp-at-dTS" userLabel="Devider">
+                                <rect key="frame" x="0.0" y="676" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.83137254900000002" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hbk-kV-zZZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SZ3-Jg-YXw"/>
+                        <color key="backgroundColor" name="RCBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vRS-Oe-OjL" firstAttribute="centerY" secondItem="Ohj-F9-FQp" secondAttribute="centerY" id="94g-ms-5Wd"/>
+                            <constraint firstItem="hyE-AZ-UX5" firstAttribute="leading" secondItem="SZ3-Jg-YXw" secondAttribute="leading" constant="19.379999999999999" id="BGg-Ge-npQ"/>
+                            <constraint firstItem="vRS-Oe-OjL" firstAttribute="centerX" secondItem="Ohj-F9-FQp" secondAttribute="centerX" id="Dyt-SU-8TO"/>
+                            <constraint firstItem="yVC-aF-V5C" firstAttribute="leading" secondItem="SZ3-Jg-YXw" secondAttribute="leading" constant="20" id="F82-fw-uPw"/>
+                            <constraint firstItem="yVC-aF-V5C" firstAttribute="top" secondItem="oGp-at-dTS" secondAttribute="bottom" constant="20" id="Fos-RP-ybK"/>
+                            <constraint firstItem="SZ3-Jg-YXw" firstAttribute="bottom" secondItem="yVC-aF-V5C" secondAttribute="bottom" constant="10" id="H5G-Ey-I1X"/>
+                            <constraint firstItem="SZ3-Jg-YXw" firstAttribute="trailing" secondItem="aZz-Qg-juw" secondAttribute="trailing" id="S60-z9-1p4"/>
+                            <constraint firstItem="SZ3-Jg-YXw" firstAttribute="trailing" secondItem="vRS-Oe-OjL" secondAttribute="trailing" constant="20" id="SZM-pw-eXo"/>
+                            <constraint firstItem="SZ3-Jg-YXw" firstAttribute="trailing" secondItem="hyE-AZ-UX5" secondAttribute="trailing" constant="19" id="XHT-GO-vj6"/>
+                            <constraint firstItem="aZz-Qg-juw" firstAttribute="top" secondItem="hyE-AZ-UX5" secondAttribute="bottom" id="fBs-xA-aSJ"/>
+                            <constraint firstItem="oGp-at-dTS" firstAttribute="top" secondItem="aZz-Qg-juw" secondAttribute="bottom" id="hrs-YJ-2Gr"/>
+                            <constraint firstItem="hyE-AZ-UX5" firstAttribute="top" secondItem="SZ3-Jg-YXw" secondAttribute="top" constant="5" id="hws-XK-Vk4"/>
+                            <constraint firstItem="oGp-at-dTS" firstAttribute="leading" secondItem="SZ3-Jg-YXw" secondAttribute="leading" id="oZ4-MV-KBB"/>
+                            <constraint firstItem="aZz-Qg-juw" firstAttribute="leading" secondItem="SZ3-Jg-YXw" secondAttribute="leading" id="rRa-LZ-gco"/>
+                            <constraint firstItem="SZ3-Jg-YXw" firstAttribute="trailing" secondItem="oGp-at-dTS" secondAttribute="trailing" id="tZ4-CO-9Xe"/>
+                            <constraint firstItem="SZ3-Jg-YXw" firstAttribute="trailing" secondItem="yVC-aF-V5C" secondAttribute="trailing" constant="20" id="uar-06-UDN"/>
+                            <constraint firstItem="vRS-Oe-OjL" firstAttribute="leading" secondItem="SZ3-Jg-YXw" secondAttribute="leading" constant="20" id="vct-zt-RSY"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="confirmDeepColorButton" destination="a6B-eE-1T1" id="ZUg-xJ-GCF"/>
+                        <outlet property="emptyLabel" destination="GJ6-ye-KTK" id="IZg-zG-FRo"/>
+                        <outlet property="emptyView" destination="vRS-Oe-OjL" id="YxN-tB-vHb"/>
+                        <outlet property="inventoryListTableView" destination="aZz-Qg-juw" id="8a9-g5-JXF"/>
+                        <outlet property="myClaimsDeepColorButton" destination="tXa-SY-jeJ" id="Ng4-fW-tc4"/>
+                        <outlet property="roomSelectionField" destination="hyE-AZ-UX5" id="6W0-op-AfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SSB-es-RGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72.558139534883722" y="3.218884120171674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="inventoryPlaceholder" width="123.5" height="72.5"/>
+        <namedColor name="RCBackgroundColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
